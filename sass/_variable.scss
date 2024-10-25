@@ -1,0 +1,51 @@
+// ================ Fonts Sizes ===========
+// Define base font sizes
+$base-font-size: 16px; // Base font size for rem calculations
+
+// Responsive font sizes in rem
+$mobile-font-size: 1rem; // Base size for mobile
+$h1-font-size-mobile: 2.5rem; // H1 size for mobile
+$h2-font-size-mobile: 2rem; // H2 size for mobile
+$h3-font-size-mobile: 1.75rem; // H3 size for mobile
+$p-font-size-mobile: 1rem; // Paragraph size for mobile
+
+// Tablet sizes
+$tablet-font-size: 1.1rem;
+$h1-font-size-tablet: 3rem; // H1 size for tablet
+$h2-font-size-tablet: 2.4rem; // H2 size for tablet
+$h3-font-size-tablet: 2.1rem; // H3 size for tablet
+
+// Desktop sizes
+$desktop-font-size: 1.25rem;
+$h1-font-size-desktop: 3.6rem; // H1 size for desktop
+$h2-font-size-desktop: 2.88rem; // H2 size for desktop
+$h3-font-size-desktop: 2.52rem; // H3 size for desktop
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// ==================== Color Pallet =======================
+// Primary Colors
+$dark-blue: #1e3a8a;
+$slate-blue: #4a5568;
+$bright-yellow: #fbbf24;
+$golden-orange: #ffb300;
+
+// Background Colors
+$soft-white: #f9fafb;
+$soft-cream: #fff8e1;
+
+// Accent Colors
+$light-gray: #e5e7eb;
+$steel-gray: #a0aec0;
+
+// Eco-Friendly Colors
+$mint-green: #6ee7b7;
+$earthy-green: #68d391;
+
+// Neutral Colors
+$charcoal: #2d3748;
+$light-beige: #f5f5dc;
+
+// Button Gradients
+$sunshine-gradient: linear-gradient(90deg, #fbbf24, #ffb300);
+$solar-panel-gradient: linear-gradient(90deg, #1e3a8a, #4a5568);
+$eco-gradient: linear-gradient(90deg, #6ee7b7, #68d391);
+$creamy-soft-gradient: linear-gradient(90deg, #fff8e1, #f9fafb);

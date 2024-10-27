@@ -32,6 +32,7 @@ body {
   width: 100%;
   height: 100vh;
   background: #f9fafb;
+  overflow-x: hidden;
 }
 body header {
   font-size: 0.9rem;
@@ -39,6 +40,11 @@ body header {
 body header .header {
   padding: 1rem;
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  border-radius: 0 0 20px 20px;
+  -webkit-border-radius: 0 0 20px 20px;
+  -moz-border-radius: 0 0 20px 20px;
+  -ms-border-radius: 0 0 20px 20px;
+  -o-border-radius: 0 0 20px 20px;
   background: #4a5568;
 }
 body header .header .logoBox {
@@ -49,14 +55,14 @@ body header .header .logoBox {
 body header .header .logoBox #logo {
   color: #fbbf24;
   text-shadow: rgba(0, 0, 0, 0.15) 2px 3px 5px;
-  font-size: 2.2rem;
+  font-size: 1.5rem;
 }
 body header .header .logoBox .nav-toggle {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -68,24 +74,22 @@ body header .header .logoBox .nav-toggle .bar-bot {
   height: 4px;
   background-color: #fbbf24;
   margin: 2px 0;
-  transition: all 0.3s ease;
 }
 body header .header .menu {
   background-color: #1e3a8a;
   position: fixed;
-  top: -100%;
-  right: 0;
-  width: 100%;
+  top: 50%;
+  right: -100%;
   z-index: 1;
   padding: 1rem;
-  transition: all ease-in-out 0.3s;
-  -webkit-transition: all ease-in-out 0.3s;
-  -moz-transition: all ease-in-out 0.3s;
-  -ms-transition: all ease-in-out 0.3s;
-  -o-transition: all ease-in-out 0.3s;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
 }
 body header .header .menu.open {
-  top: 13%;
+  right: 0;
 }
 body header .header ul {
   padding: 0;

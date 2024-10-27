@@ -1,5 +1,7 @@
-// ================ Fonts Sizes ===========
-// Define base font sizes
+// ==================== Fonts =======================
+$font-family: 'Poppins', sans-serif; // Base font family
+
+// ==================== Font Sizes ===================
 $base-font-size: 16px; // Base font size for rem calculations
 
 // Responsive font sizes in rem
@@ -20,31 +22,20 @@ $desktop-font-size: 1.25rem;
 $h1-font-size-desktop: 3.2rem; // H1 size for desktop
 $h2-font-size-desktop: 2.4rem; // H2 size for desktop
 $h3-font-size-desktop: 2rem; // H3 size for desktop
-// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-// ==================== Color Pallet =======================
-// Primary Colors
-$dark-blue: #1e3a8a;
-$slate-blue: #4a5568;
-$bright-yellow: #fbbf24;
-$golden-orange: #ffb300;
 
-// Background Colors
-$soft-white: #f9fafb;
-$soft-cream: #fff8e1;
+// ==================== Color Palette ================
+$primary-color: #1e3a8a; // Dark Blue
+$secondary-color: #4a5568; // Slate Blue
+$accent-color: #fbbf24; // Bright Yellow
+$highlight-color: #ffb300; // Golden Orange
+$background-light: #f9fafb; // Soft White
+$background-dark: #333; // Dark background for footer
+$light-gray: #e5e7eb; // Light gray for backgrounds or borders
+$dark-gray: #2d3748; // Dark gray for text or accents
+$mint-green: #6ee7b7; // Eco-friendly mint green
+$earthy-green: #68d391; // Earthy green for eco themes
 
-// Accent Colors
-$light-gray: #e5e7eb;
-$steel-gray: #a0aec0;
-
-// Eco-Friendly Colors
-$mint-green: #6ee7b7;
-$earthy-green: #68d391;
-
-// Neutral Colors
-$charcoal: #2d3748;
-$light-beige: #f5f5dc;
-
-// Button Gradients
+// ==================== Button Gradients =============
 $sunshine-gradient: linear-gradient(90deg, #fbbf24, #ffb300);
 $solar-panel-gradient: linear-gradient(90deg, #1e3a8a, #4a5568);
 $eco-gradient: linear-gradient(90deg, #6ee7b7, #68d391);

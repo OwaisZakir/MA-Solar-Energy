@@ -1,6 +1,6 @@
-@import "./_variables";
+@import "./_variables"; // Import color and sizing variables
 @font-face {
-  font-family: poppins;
+  font-family: "Poppins";
   src: url(../fonts/Poppins-Regular.ttf);
 }
 * {
@@ -10,48 +10,148 @@
   text-decoration: none;
   text-transform: uppercase;
   list-style: none;
-  font-family: poppins;
-  font-size: $base-font-size;
-  word-break: break-all;
+  font-family: $font-family;
 }
 body {
   width: 100%;
-  height: 100dvh;
-  background: $soft-white;
+  height: 100vh;
+  background: $background-light;
   header {
     font-size: $mobile-font-size;
     .header {
       padding: 1rem;
-      // box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
-      //   rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
-      //   rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-      box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+      box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px,
         rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
       .logoBox {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        // box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
-        //   rgba(17, 17, 26, 0.1) 0px 0px 8px;
         #logo {
-          word-spacing: -1px;
-          color: $bright-yellow;
+          color: $accent-color;
           text-shadow: rgba(0, 0, 0, 0.15) 2px 3px 5px;
-          font-size: 1.8rem;
-          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          font-size: $h1-font-size-mobile;
         }
-        button{
-          padding: .6rem;
-          background: $eco-gradient;
+        .nav-toggle {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          width: 40px;
+          height: 40px;
+          background: transparent;
+          border: none;
+          cursor: pointer;
+          .bar-top,
+          .bar-mid,
+          .bar-bot {
+            width: 100%;
+            height: 4px;
+            background-color: $accent-color;
+            margin: 2px 0;
+            transition: all 0.3s ease;
+          }
         }
-      } 
+      }
+    }
+    .menu {
+      display: none; // Initially hidden
+      background-color: $primary-color; // Dark blue
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 200px;
+      z-index: 1000;
+      padding: 1rem;
+      &.open {
+        display: block; // Show when open
+      }
+      ul {
+        padding: 0;
+        li {
+          padding: 10px 0;
+          a {
+            color: $background-light; // White text
+            transition: color 0.3s;
+            &:hover {
+              color: $highlight-color; // Change on hover
+            }
+          }
+        }
+      }
     }
   }
-  #home{
-    padding-top: 9rem;
-    .contain{
-      h1{
-        font-size: 1.8rem;
+  #home {
+    padding-top: 9rem; // Space for header
+    .container {
+      text-align: center; // Center content
+      .contain {
+        h1 {
+          font-size: $h1-font-size-mobile;
+          color: $primary-color;
+        }
+        p {
+          font-size: $p-font-size-mobile;
+          color: $secondary-color; // Slate blue
+        }
+        .btn {
+          display: inline-block;
+          padding: 0.5rem 1rem;
+          background-color: $accent-color;
+          color: $background-light;
+          border: none;
+          border-radius: 5px;
+          text-transform: none; // Keep normal case
+          transition: background-color 0.3s;
+          &:hover {
+            background-color: $highlight-color; // Change on hover
+          }
+        }
+      }
+    }
+  }
+  footer {
+    background-color: $primary-color;
+    color: $background-light;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  // Toggle button animation styles
+  .open .bar-top {
+    transform: rotate(45deg) translateY(10px);
+  }
+  .open .bar-mid {
+    opacity: 0;
+  }
+  .open .bar-bot {
+    transform: rotate(-45deg) translateY(-10px);
+  }
+  // Responsive Design Adjustments
+  @media (min-width: 768px) {
+    header {
+      font-size: $tablet-font-size;
+      #logo {
+        font-size: $h1-font-size-tablet; // Adjust logo size for tablet
+      }
+    }
+    #home {
+      .contain {
+        h1 {
+          font-size: $h1-font-size-tablet; // Adjust heading size for tablet
+        }
+      }
+    }
+  }
+  @media (min-width: 1024px) {
+    header {
+      font-size: $desktop-font-size;
+      #logo {
+        font-size: $h1-font-size-desktop; // Adjust logo size for desktop
+      }
+    }
+    #home {
+      .contain {
+        h1 {
+          font-size: $h1-font-size-desktop; // Adjust heading size for desktop
+        }
       }
     }
   }

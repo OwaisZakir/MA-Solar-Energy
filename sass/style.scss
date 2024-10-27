@@ -12,7 +12,6 @@
   list-style: none;
   font-family: poppins;
   font-size: $base-font-size;
-  color: $light-gray;
   word-break: break-all;
 }
 body {
@@ -22,14 +21,16 @@ body {
   header {
     font-size: $mobile-font-size;
     .header {
-      padding: 0.5rem;
+      padding: 1rem;
       // box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
       //   rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
       //   rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
       box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
         rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
       .logoBox {
-        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         // box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
         //   rgba(17, 17, 26, 0.1) 0px 0px 8px;
         #logo {
@@ -39,31 +40,18 @@ body {
           font-size: 1.8rem;
           font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
-      }
-      .navBar {
-        ul {
-          margin-top: 0.8rem;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          li {
-            a {
-              color: $slate-blue;
-              padding: 0.2rem 0.75rem;
-              border-radius: 5px;
-              -webkit-border-radius: 5px;
-              -moz-border-radius: 5px;
-              -ms-border-radius: 5px;
-              -o-border-radius: 5px;
-            }
-          }
-          .active {
-            background: $creamy-soft-gradient;
-            color: $bright-yellow;
-            box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
-              rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
-          }
+        button{
+          padding: .6rem;
+          background: $eco-gradient;
         }
+      } 
+    }
+  }
+  #home{
+    padding-top: 9rem;
+    .contain{
+      h1{
+        font-size: 1.8rem;
       }
     }
   }

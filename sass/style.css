@@ -11,7 +11,6 @@
   list-style: none;
   font-family: poppins;
   font-size: 16px;
-  color: #e5e7eb;
   word-break: break-all;
 }
 
@@ -21,14 +20,16 @@ body {
   background: #f9fafb;
 }
 body header {
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 body header .header {
-  padding: 0.5rem;
+  padding: 1rem;
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 body header .header .logoBox {
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 body header .header .logoBox #logo {
   word-spacing: -1px;
@@ -37,23 +38,13 @@ body header .header .logoBox #logo {
   font-size: 1.8rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-body header .header .navBar ul {
-  margin-top: 0.8rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+body header .header .logoBox button {
+  padding: 0.6rem;
+  background: linear-gradient(90deg, #6ee7b7, #68d391);
 }
-body header .header .navBar ul li a {
-  color: #4a5568;
-  padding: 0.2rem 0.75rem;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+body #home {
+  padding-top: 9rem;
 }
-body header .header .navBar ul .active {
-  background: linear-gradient(90deg, #fff8e1, #f9fafb);
-  color: #fbbf24;
-  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+body #home .contain h1 {
+  font-size: 1.8rem;
 }/*# sourceMappingURL=style.css.map */

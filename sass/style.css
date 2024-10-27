@@ -16,6 +16,18 @@ html {
   scroll-behavior: smooth;
 }
 
+.open .bar-top {
+  transform: rotate(45deg) translateY(10px);
+}
+
+.open .bar-mid {
+  opacity: 0;
+}
+
+.open .bar-bot {
+  transform: rotate(-45deg) translateY(-10px);
+}
+
 body {
   width: 100%;
   height: 100vh;
@@ -27,6 +39,7 @@ body header {
 body header .header {
   padding: 1rem;
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  background: #4a5568;
 }
 body header .header .logoBox {
   display: flex;
@@ -57,30 +70,34 @@ body header .header .logoBox .nav-toggle .bar-bot {
   margin: 2px 0;
   transition: all 0.3s ease;
 }
-body header .menu {
-  display: none;
+body header .header .menu {
   background-color: #1e3a8a;
-  position: absolute;
-  top: 100%;
+  position: fixed;
+  top: -100%;
   right: 0;
-  width: 200px;
-  z-index: 1000;
+  width: 100%;
+  z-index: 1;
   padding: 1rem;
+  transition: all ease-in-out 0.3s;
+  -webkit-transition: all ease-in-out 0.3s;
+  -moz-transition: all ease-in-out 0.3s;
+  -ms-transition: all ease-in-out 0.3s;
+  -o-transition: all ease-in-out 0.3s;
 }
-body header .menu.open {
-  display: block;
+body header .header .menu.open {
+  top: 13%;
 }
-body header .menu ul {
+body header .header ul {
   padding: 0;
 }
-body header .menu ul li {
+body header .header ul li {
   padding: 10px 0;
 }
-body header .menu ul li a {
+body header .header ul li a {
   color: #f9fafb;
   transition: color 0.3s;
 }
-body header .menu ul li a:hover {
+body header .header ul li a:hover {
   color: #ffb300;
 }
 body #home {
@@ -115,35 +132,4 @@ body footer {
   color: #f9fafb;
   text-align: center;
   padding: 1rem 0;
-}
-body .open .bar-top {
-  transform: rotate(45deg) translateY(10px);
-}
-body .open .bar-mid {
-  opacity: 0;
-}
-body .open .bar-bot {
-  transform: rotate(-45deg) translateY(-10px);
-}
-@media (min-width: 768px) {
-  body header {
-    font-size: 1rem;
-  }
-  body header #logo {
-    font-size: 2.6rem;
-  }
-  body #home .contain h1 {
-    font-size: 2.6rem;
-  }
-}
-@media (min-width: 1024px) {
-  body header {
-    font-size: 1.25rem;
-  }
-  body header #logo {
-    font-size: 3.2rem;
-  }
-  body #home .contain h1 {
-    font-size: 3.2rem;
-  }
 }/*# sourceMappingURL=style.css.map */

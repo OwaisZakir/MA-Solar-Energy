@@ -12,7 +12,7 @@ menuToggle.addEventListener("click", () => {
   menu.setAttribute("aria-expanded", isOpen);
 
   // Show or hide the menu based on the state
-  menu.style.display = isOpen ? "block" : "none";
+  menu.style.display = isOpen ? "top:13%;" : "top:-100%;";
 });
 
 // Close the menu when clicking outside
@@ -20,7 +20,7 @@ document.addEventListener("click", (event) => {
   if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
     menuToggle.classList.remove("open");
     menu.classList.remove("open");
-    menu.style.display = "none"; // Hide the menu
+    menu.style.display = "top:-100%;"; // Hide the menu
     menu.setAttribute("aria-expanded", "false");
   }
 });
